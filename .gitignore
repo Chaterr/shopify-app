@@ -1,0 +1,10 @@
+.env
+.idea
+.DS_Store
+assets/
+node_modules/
+dump.rdb
+app.bundle.js
+db.sqlite3
+yarn.lock
+yarn-error.log

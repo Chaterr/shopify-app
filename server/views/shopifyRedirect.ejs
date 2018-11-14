@@ -1,0 +1,15 @@
+<script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+<script type='text/javascript'>
+  let redirectURL = "<%= redirectURL %>"
+  console.log(redirectURL);
+  // If the current window is the 'parent', change the URL by setting location.href
+  if (window.top == window.self) {
+    // console.log('parent');
+    window.location.assign(redirectURL);
+    // If the current window is the 'child', change the parent's URL with ShopifyApp.redirect
+  } else {
+    // console.log('child');
+    window.top.location.href = redirectURL;
+    // ShopifyApp.remoteRedirect(redirectURL);
+  }
+</script>
